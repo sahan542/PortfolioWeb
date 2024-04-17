@@ -80,4 +80,7 @@ span{
     cursor: pointer;
     margin-left: 25px;
     background: var(--second-bg-color);
+    border-radius: 3px;
+    color: var(--hover-color);
+    display: none;
 }
