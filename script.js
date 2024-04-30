@@ -79,3 +79,9 @@ function activeMenu(){
 }
 activeMenu();
 window.addEventListener("scroll",activeMenu);
+
+//sticky navbar ////////////////
+const header = document.querySelector("header");
+window.addEventListener("scroll",function() {
+    header.classList.toggle("sticky",window.scrollY > 50);
+})
