@@ -56,13 +56,16 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 20px 10%;
+
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 1010px;
 }
 header.sticky{
     background: var(--bg-color);
     border-bottom: 1px solid var(--second-bg-color);
     padding: 12px 10%;
+    width: 1010px;
 }
 .logo{
     font-size: 26px;
@@ -730,6 +733,7 @@ section{
 /* Contact me section */
 .contact{
     background: var(--second-bg-color);
+    width: 1010px;
 }
 .contact form{
     text-align: center;
@@ -840,6 +844,24 @@ footer i:hover{
     0%{
         background: var(--hover-color);
         box-shadow: var(--neon-box-shadow);
+    }
+}
+
+
+
+
+/*Break points*/
+@media(max-width:991px){
+    header,
+    header .sticky{
+        padding: 25px 5%;
+    }
+
+    footer{
+        padding: 15px 5%;
+    }
+    section{
+        padding: 50px 5%;
     }
 }
 
