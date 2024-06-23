@@ -116,3 +116,47 @@ const elementsToObserve = document.querySelectorAll(".scroll-scale, .scroll-bott
 
 // Observe each element
 elementsToObserve.forEach((el) => observer.observe(el));
+
+
+function toggleEducation() {
+    var educationDiv = document.getElementById("myDiv1");
+    var expandIcons = document.querySelectorAll(".uil-angle-down");
+  
+    if (educationDiv.style.display === "none") {
+      educationDiv.style.display = "block";
+      expandIcons.forEach(icon => icon.classList.add("expanded"));
+    } else {
+      educationDiv.style.display = "none";
+      expandIcons.forEach(icon => icon.classList.remove("expanded"));
+    }
+  }
+  
+  function toggleVolanteering() {
+    var volunteeringDiv = document.getElementById("myDiv2");
+    var expandIcons = document.querySelectorAll(".expand");
+  
+    if (volunteeringDiv.style.display === "none") {
+      volunteeringDiv.style.display = "block";
+      expandIcons.forEach(icon => icon.classList.add("expanded"));
+    } else {
+      volunteeringDiv.style.display = "none";
+      expandIcons.forEach(icon => icon.classList.remove("expanded"));
+    }
+  }
+
+
+
+  function sendEmail() {
+    Email.send({
+       SecureToken :"11ac623f-087b-440b-9bf3-80a932cae2f6" ,
+       To: 'sahanrashmika542@gmail.com',
+       From: '',
+       Subject: "My -Porfolio Massage",
+       Body: "Name:" + document.getElementById("name").value 
+       + "<br/>Email:" + document.getElementById("email").value 
+       + "<br/>Phone no:" + document.getElementById("phone").value 
+       + "<br/>Message:" + document.getElementById("message").value,
+    }).then(
+       message => alert(message)
+    );
+ }
