@@ -1897,7 +1897,7 @@ footer p{
         width: 100%;
     }
     i{
-        padding-right: 250px;
+        text-align: right;
     }
     footer p{
         padding-left: 0;
